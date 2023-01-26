@@ -25,6 +25,7 @@ set_package_properties(LibDDemangle PROPERTIES
 include(CheckSymbolExists)
 set(CMAKE_REQUIRED_LIBRARIES elfutils::dw elfutils::elf)
 #check_symbol_exists(dwfl_get_debuginfod_client "libdwfl.h" HAVE_DWFL_GET_DEBUGINFOD_CLIENT)
+set(HAVE_DWFL_GET_DEBUGINFOD_CLIENT 0)
 
 add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII -DQT_USE_QSTRINGBUILDER)
 add_subdirectory(app)
